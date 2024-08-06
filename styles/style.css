@@ -6,6 +6,7 @@
     --color-secundario: #0A3871;
     --color-terciario: #D8DFE8;
     --color-hover: #272727;
+    --color-texto:#495057;
 
     --fuente-inter: 'Inter', sans-serif;
 }
@@ -13,10 +14,106 @@
 * {
     padding: 0;
     margin:0;
-}
-
-body {
     font-family: var(--fuente-inter);
     background-color: var(--color-primario);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+
+.logo {
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 10%;
+}
+
+main {
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+
+.text-area {
+    border: none;
     color: var(--color-secundario);
+    margin-top: 90px;
+    text-transform: lowercase;
+}
+
+::placeholder {
+    color: var(--color-secundario);
+}
+.text-area:focus {
+    outline: none;
+}
+
+.mensaje {
+    background: white;
+    background-image: url("../assets/img/munieco.png");
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 24px;
+    color: var(--color-secundario);
+    margin-left: 98px;
+    margin-top: 20px;
+    padding-left: 20px;
+    position: fixed;
+}
+
+.mensaje:focus {
+    outline: none;
+}
+
+.botones {
+    display: flex;
+    margin-top: 18px;
+}
+
+.btn-desencriptar {
+    background-color: var(--color-terciario);
+    border: 1px solid var(--color-secundario);
+    border-radius: 24px;
+    color: var(--color-secundario);
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 328px;
+}
+
+.btn-encriptar{
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-secundario);
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+}
+
+.copiar {
+    border: 1px solid var(--color-secundario);
+    border-radius: 24px;
+    color: var(--color-secundario);
+    cursor: pointer;
+    height: 67px;
+    margin-left: 108px;
+    margin-top: 402px;
+    position: absolute;
+    width: 336px;
+}
+
+.informacion {
+    display: flex;
+    align-items: center;
+    
+}
+
+.informacion p {
+    margin-left: 8px;
+    color: var(--color-texto);
+    font-size: 12px;
+}
+.informacion img {
+    width: 16px;
 }
