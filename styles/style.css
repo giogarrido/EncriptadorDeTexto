@@ -39,6 +39,7 @@ main {
     color: var(--color-secundario);
     margin-top: 90px;
     text-transform: lowercase;
+    resize: none;
 }
 
 ::placeholder {
@@ -48,17 +49,19 @@ main {
     outline: none;
 }
 
-.mensaje {
+.mensaje__contenido__mensaje {
+    width: 100%;
     background: white;
     background-image: url("../assets/img/munieco.png");
     background-repeat: no-repeat;
+    background-position: 50% 50%;
     border: none;
     border-radius: 24px;
     color: var(--color-secundario);
-    margin-left: 98px;
-    margin-top: 20px;
+    /* margin-left: 98px; */
+    margin-top: 70px;
     padding-left: 20px;
-    position: fixed;
+    resize: none;
 }
 
 .mensaje:focus {
@@ -68,6 +71,7 @@ main {
 .botones {
     display: flex;
     margin-top: 18px;
+    margin-bottom: 20px;
 }
 
 .btn-desencriptar {
@@ -91,16 +95,17 @@ main {
     width: 328px;
 }
 
-.copiar {
+.btn-copiar {
     border: 1px solid var(--color-secundario);
     border-radius: 24px;
     color: var(--color-secundario);
+    background-color: white;
     cursor: pointer;
     height: 67px;
-    margin-left: 108px;
-    margin-top: 402px;
-    position: absolute;
     width: 336px;
+    box-sizing: border-box;
+    display: none;
+    margin-top: 40px;
 }
 
 .informacion {
@@ -117,3 +122,145 @@ main {
 .informacion img {
     width: 16px;
 }
+
+.texto__contenido{
+    flex:2;
+    box-sizing: border-box;
+    margin-left: 150px;
+
+}
+
+.mensaje__contenido{
+    flex:1;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 20px;
+    border-radius: 24px;
+    margin-right: 60px;
+    border: 20px;
+
+    /*Agregar sombreado*/
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    /*Centrar contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mensaje__contenido__informacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+    margin-left: 50px;
+     text-align: center;
+    background-color: white;
+}
+
+.mensaje__contenido__subtitulo{
+    font-size: 24px;
+    font-weight: bold;
+    color: #343A40;
+    background-color: white;
+    margin-bottom: 10px;
+   
+}
+
+.mensaje__contenido__texto{
+    font-size: 16px;
+    color: var(--color-texto);
+    background-color: white;
+}
+
+/*Resposividad*/
+
+/*Para tablet*/
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .texto__contenido {
+        margin-left: 0;
+    }
+
+    .mensaje__contenido {
+        margin-top: 50px;
+        margin-right: 0;
+        
+        
+    }
+
+    .mensaje__contenido__mensaje {
+        display: none;
+    }
+    .btn-desencriptar {
+        width: 332px;
+    }
+
+    .btn-encriptar {
+        width: 332px;
+    }
+
+    .btn-copiar {
+        width: 624px;
+    }
+
+    .botones{
+        display: flex;
+        justify-content:center;
+    }
+
+}
+
+/*Para celular*/
+@media (max-width: 425px) {
+    .logo {
+        width: 20%;
+    }
+
+    main {
+        flex-direction: column;
+        margin-left: 0;
+        
+    }
+
+    .texto__contenido {
+        margin-left: 0;
+    }
+
+    .mensaje__contenido {
+        margin-right: 0;
+    }
+
+    .mensaje__contenido__mensaje {
+        display: none;
+    }
+
+    .botones {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-desencriptar {
+        width: 343px;
+        margin-left: 0px;
+        margin-top: 24px;
+    }
+
+    .btn-encriptar {
+        width: 343px;
+    }
+
+    .btn-copiar {
+        width: 279px;
+    }
+    
+}
+

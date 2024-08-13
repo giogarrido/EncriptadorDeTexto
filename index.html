@@ -15,7 +15,7 @@
 
     <main>
 
-        <section>
+        <section class="texto__contenido">
 
             <textarea class="text-area" cols="20" rows="10" placeholder="Ingrese el texto aquí"></textarea>
             <div class="informacion">
@@ -30,18 +30,19 @@
 
         </section>
 
-        <section>
-            <textarea class="mensaje" cols="20" rows="10" placeholder=""></textarea>
-            <div>
-                <button class="copiar" onclick="btnCopiar()">Copiar</button>
+        <section class="mensaje__contenido">
+            <textarea class="mensaje__contenido__mensaje" cols="20" rows="10" placeholder=""></textarea>
+            <div class="mensaje__contenido__informacion">
+                <h4 class="mensaje__contenido__subtitulo">Ningún mensaje fue encontrado</h4>
+                <p class="mensaje__contenido__texto">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
+
+
+            <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
+
         </section>
 
     </main>
-
-    <footer>
-        <p>Desarrollado por Giovanni Garrido</p>
-    </footer>
 
     <script src="assets/js/script.js"></script>
 </body>
